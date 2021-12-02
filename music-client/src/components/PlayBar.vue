@@ -2,7 +2,7 @@
   <div class="play-bar" :class="{show:!toggle}">
     <div @click="toggle=!toggle" class="item-up" :class="{turn: toggle}">
       <svg class="icon" aria-hidden="true">
-        <use :xlink:href="ZHEDIE"></use>
+        
       </svg>
     </div>
     <div class="kongjian" >
@@ -68,11 +68,6 @@
         </svg>
       </div>
       <!--下载-->
-      <div class="item" @click="downloadMusic">
-        <svg class="icon" aria-hidden="true">
-          <use :xlink:href="XIAZAI"></use>
-        </svg>
-      </div>
       <!--歌曲列表-->
       <div class="item" @click="changeAside">
         <svg class="icon" aria-hidden="true">
@@ -354,7 +349,7 @@ export default {
             console.log(err)
           })
       } else {
-        this.notify('请先登录', 'warning')
+        this.notify('请先登录您的Music Max ID', 'warning')
       }
     }
   }

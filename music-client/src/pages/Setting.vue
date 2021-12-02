@@ -34,7 +34,7 @@ export default {
         path: 'Info'
       }, {
         icon: '',
-        name: '修改头像',
+        name: '更新头像',
         path: 'Upload'
       }]
     }

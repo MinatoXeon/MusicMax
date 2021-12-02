@@ -4,7 +4,7 @@
     <div class="collapse-btn" @click="collapseChage">
       <i class="el-icon-s-unfold"></i>
     </div>
-    <div class="logo">Yin-music 后台管理</div>
+    <div class="logo">Music Max 控制中心</div>
     <div class="header-right">
       <div class="header-user-con">
         <!-- 用户头像 -->
@@ -18,7 +18,7 @@
             <i class="el-icon-caret-bottom"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item command="loginout">退出登录</el-dropdown-item>
+            <el-dropdown-item command="loginout">退出控制中心</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>
@@ -33,7 +33,7 @@ export default {
     return {
       collapse: true,
       fullscreen: false,
-      username: 'admin'
+      username: '管理员'
     }
   },
   mounted () {

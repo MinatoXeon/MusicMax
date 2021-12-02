@@ -1,45 +1,9 @@
-<template>
-  <div>
-    <div class="comment">
-      <h2>
-        <span>评论</span>
-        <span class="part__tit_desc">共 {{commentList.length}} 条评论</span>
-      </h2>
-      <div class="comment-msg">
-        <el-input
-          class="comment-input"
-          type="textarea"
-          placeholder="期待您的精彩评论..."
-          :rows="2"
-          v-model="textarea">
-        </el-input>
-      </div>
-      <el-button type="primary" class="sub-btn" @click="postComment()">发表评论</el-button>
-    </div>
-    <ul class="popular" v-for="(item, index) in commentList" :key="index">
-      <li>
-        <div class="popular-img">
-          <img :src="attachImageUrl(userPic[index])" alt="">
-        </div>
-        <div class="popular-msg">
-          <ul>
-            <li class="name">{{userName[index]}}</li>
-            <li class="content">{{item.content}}</li>
-            <li class="time">{{item.createTime}}</li>
-          </ul>
-        </div>
-        <div class="up" ref="up" @click="postUp(item.id, item.up, index)">
-          <svg class="icon" aria-hidden="true">
-            <use :xlink:href="ZAN"></use>
-          </svg>
-          {{item.up}}
-        </div>
-      </li>
-    </ul>
-  </div>
-</template>
 
-<script>
+<template>
+  
+</template> 
+
+ <script>
 import mixin from '../mixins'
 import { mapGetters } from 'vuex'
 import { HttpManager } from '../api/index'
@@ -130,7 +94,7 @@ export default {
             console.log(err)
           })
       } else {
-        this.notify('请先登录', 'warning')
+        this.notify('请先登录您的Music Max ID', 'warning')
       }
     },
     // 点赞
@@ -150,7 +114,7 @@ export default {
             console.log(err)
           })
       } else {
-        this.notify('请先登录', 'warning')
+        this.notify('请先登录您的Music Max ID', 'warning')
       }
     }
   }
@@ -159,4 +123,4 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/css/comment.scss';
-</style>
+ </style>

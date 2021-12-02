@@ -3,7 +3,7 @@
   <loginLogo/>
   <div class="signUp">
     <div class="signUp-head">
-      <span>用户注册</span>
+      <span>创建您的Music Max ID</span>
     </div>
     <el-form :model="registerForm" status-icon :rules="rules" ref="registerForm" label-width="70px" class="demo-ruleForm">
       <el-form-item prop="username" label="用户名">
@@ -11,6 +11,9 @@
       </el-form-item>
       <el-form-item prop="password" label="密码">
         <el-input type="password" placeholder="密码" v-model="registerForm.password"></el-input>
+      </el-form-item>
+       <el-form-item prop="password" label="密码">
+        <el-input type="password" placeholder="二次确认密码" v-model="registerForm.abc"></el-input>
       </el-form-item>
       <el-form-item prop="sex" label="性别">
         <el-radio-group v-model="registerForm.sex">
@@ -30,14 +33,10 @@
       <el-form-item prop="introduction" label="签名">
         <el-input  type="textarea" placeholder="签名" v-model="registerForm.introduction" ></el-input>
       </el-form-item>
-      <el-form-item prop="location" label="地区">
-        <el-select v-model="registerForm.location" placeholder="地区" style="width:100%">
-          <el-option v-for="item in cities" :key="item.value" :label="item.label" :value="item.value"></el-option>
-        </el-select>
-      </el-form-item>
+     
       <div class="login-btn">
         <el-button @click="goback(-1)">取消</el-button>
-        <el-button type="primary" @click="SignUp">确定</el-button>
+        <el-button type="danger" @click="SignUp">继续</el-button>
       </div>
     </el-form>
   </div>
@@ -86,7 +85,7 @@ export default {
       params.append('birth', datetime)
       params.append('introduction', this.registerForm.introduction)
       params.append('location', this.registerForm.location)
-      params.append('avator', '/img/user.jpg')
+      params.append('avator', '/img/avatorImages/user.jpg')
       HttpManager.SignUp(params)
         .then(res => {
           console.log(res)

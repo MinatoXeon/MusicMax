@@ -26,7 +26,7 @@
     .item {
       position: relative;
       width: 80px;
-      height: 50px;
+      height: 45px;
       line-height: 60px;
       text-align: center;
       cursor: pointer;
@@ -63,7 +63,7 @@
       .left-time {
         width: 70px;
         text-align: center;
-        font-size: 13px;
+        font-size: 21px;
         color: $color-black;
         font-weight: 500;
         top: -10px;
@@ -73,27 +73,27 @@
         flex: 1;
         .item-song-title {
           @include layout(space-between);
-          height: 20px;
-          line-height: 10px;
+          height: 27px;
+          line-height: 21px;
         }
         .progress {
           width: 100%;
-          background: $color-blue-shallow;
+          background: $color-light-grey;
           height: 6px;
           .bg {
             height: 100%;
             .cur-progress {
               height: 100%;
-              background: $color-blue-active;
+              background: $color-grey;
             }
           }
           .idot {
-            width: 16px;
-            height: 16px;
+            width: 6px;
+            height: 12px;
             position: relative;
-            border-radius: 50%;
+            border-radius: 0%;
             background-color: $color-black;
-            top: -11px;
+            top: -12px;
             vertical-align: middle;
           }
         }
@@ -111,5 +111,5 @@
 }
 
 .icon {
-  @include icon(1.2em, $color-black);
+  @include icon(1.4em, $color-black);
 }

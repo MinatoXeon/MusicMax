@@ -17,19 +17,7 @@
       </div>
       <!--评分-->
       <div class="album-score">
-        <div>
-          <h3>歌单评分：</h3>
-          <div>
-            <el-rate v-model="value5" disabled></el-rate>
-          </div>
-        </div>
-        <span>{{value5 * 2}}</span>
-        <div>
-          <h3>评价：</h3>
-          <div @click="pushValue()">
-            <el-rate v-model="value3" show-text allow-half></el-rate>
-          </div>
-        </div>
+        
       </div>
       <!--歌曲-->
       <div class="songs-body">
@@ -137,7 +125,7 @@ export default {
           })
       } else {
         this.value3 = null
-        this.notify('请先登录', 'warning')
+        this.notify('请先登录您的Music Max ID', 'warning')
       }
     }
   }

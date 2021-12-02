@@ -1,6 +1,6 @@
 <template>
   <div class="login-wrap">
-    <div class="ms-title">Yin-music 后台管理</div>
+    <div class="ms-title">Music Max 控制中心</div>
     <div class="ms-login">
       <el-form
         ref="ruleForm"
@@ -20,7 +20,7 @@
           ></el-input>
         </el-form-item>
         <div class="login-btn">
-          <el-button type="primary" @click="submitForm">登录</el-button>
+          <el-button type="primary" @click="submitForm">继续</el-button>
         </div>
         <p style="font-size:12px;line-height:30px;color:#999;">Tips : 用户名和密码要写数据库里的。</p>
       </el-form>

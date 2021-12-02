@@ -4,9 +4,9 @@
 .the-footer {
   width: 100%;
   height: $footer-height;
-  background-color: $theme-footer-color;
+  background-color: transparent;
   @include layout(center, center, column);
   p {
-    height: 30px;
+    height: 27px;
   }
 }

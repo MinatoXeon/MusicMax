@@ -3,18 +3,18 @@
   <login-logo/>
   <div class="login">
     <div class="login-head">
-      <span>帐号登录</span>
+      <span>管理您的Music Max ID</span>
     </div>
     <el-form :model="loginForm" status-icon :rules="rules" ref="loginForm" class="demo-ruleForm" >
       <el-form-item prop="username">
-        <el-input placeholder="用户名" v-model="loginForm.username"></el-input>
+        <el-input placeholder="Music Max ID" v-model="loginForm.username"></el-input>
       </el-form-item>
       <el-form-item prop="password">
         <el-input type="password" placeholder="密码" v-model="loginForm.password" @keyup.enter.native="loginIn"></el-input>
       </el-form-item>
       <div class="login-btn">
-        <el-button @click="goSignUp">注册</el-button>
-        <el-button type="primary" @click="handleleLoginIn">登录</el-button>
+        <el-button @click="goSignUp">创建ID</el-button>
+        <el-button type="danger" @click="handleleLoginIn">登录</el-button>
       </div>
     </el-form>
   </div>
@@ -35,14 +35,14 @@ export default {
   data: function () {
     let validateName = (rule, value, callback) => {
       if (!value) {
-        return callback(new Error('用户名不能为空'))
+        return callback(new Error('Music Max ID不能为空。'))
       } else {
         callback()
       }
     }
     let validatePassword = (rule, value, callback) => {
       if (value === '') {
-        callback(new Error('请输入密码'))
+        callback(new Error('请输入密码。'))
       } else {
         callback()
       }
@@ -54,10 +54,10 @@ export default {
       },
       rules: {
         username: [
-          { validator: validateName, message: '请输入用户名', trigger: 'blur' }
+          { validator: validateName, message: '请填写此字段。', trigger: 'blur' }
         ],
         password: [
-          { validator: validatePassword, message: '请输入密码', trigger: 'blur' }
+          { validator: validatePassword, message: '请填写此字段。', trigger: 'blur' }
         ]
       }
     }
@@ -90,7 +90,7 @@ export default {
               _this.$router.go(0)
             }, 2000)
           } else {
-            _this.notify('用户名或密码错误', 'error')
+            _this.notify('Music Max ID或密码不正确', 'error')
           }
         })
         .catch(failResponse => {})

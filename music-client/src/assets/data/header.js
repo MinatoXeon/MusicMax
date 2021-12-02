@@ -3,11 +3,8 @@ const navMsg = [{
   name: '首页',
   path: '/'
 }, {
-  name: '歌单',
+  name: '音乐馆',
   path: '/song-list'
-}, {
-  name: '歌手',
-  path: '/singer'
 }, {
   name: '我的音乐',
   path: '/my-music'
@@ -15,19 +12,19 @@ const navMsg = [{
 
 // 右侧导航栏
 const loginMsg = [{
-  name: '登录',
+  name: '管理Music Max ID',
   path: '/login-in'
 }, {
-  name: '注册',
+  name: '创建Music Max ID',
   path: '/sign-up'
 }]
 
 // 用户下拉菜单项
 const menuList = [{
-  name: '设置',
+  name: '管理用户信息',
   path: '/setting'
 }, {
-  name: '退出',
+  name: '注销',
   path: 0
 }]
 

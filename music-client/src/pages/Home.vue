@@ -1,19 +1,20 @@
 <template>
   <div class="home">
     <!--轮播图-->
-    <el-carousel class="swiper-container" :interval="4000" type="card" height="280px">
+    <el-carousel class="swiper-container" :interval="4000" type="card" height="380px">
       <el-carousel-item v-for="(item, index) in swiperList" :key="index">
         <img :src="item.picImg"/>
       </el-carousel-item>
     </el-carousel>
+
     <!--热门歌单-->
     <div class="section">
-      <div class="section-title">歌单</div>
+      <div class="section-title">音乐馆</div>
       <content-list :contentList="songList" path="song-list-album"></content-list>
     </div>
     <!--热门歌手-->
     <div class="section">
-      <div class="section-title">歌手</div>
+      <div class="section-title">艺人</div>
       <content-list :contentList="singerList" path="singer-album"></content-list>
     </div>
   </div>
@@ -21,7 +22,7 @@
 
 <script>
 import ContentList from '../components/ContentList'
-import { swiperList } from '../assets/data/swiper'
+import {swiperList } from '../assets/data/swiper'
 import { HttpManager } from '../api/index'
 
 export default {
@@ -31,7 +32,7 @@ export default {
   },
   data () {
     return {
-      swiperList: swiperList, // 轮播图列表
+      swiperList:swiperList, // 轮播图列表
       songList: [], // 歌单列表
       singerList: [] // 歌手列表
     }

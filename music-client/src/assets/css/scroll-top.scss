@@ -1,4 +1,4 @@
-@import "var.scss";
+/*@import "var.scss";
 @import "global.scss";
 
 .scroll-top {
@@ -12,7 +12,7 @@
   background-color: $color-white;
   border-radius: 20%;
   overflow: hidden;
-  @include box-shadow(0 0 4px 3px rgba(0, 0, 0, 0.2));
+  @include box-shadow(0 0 4px 3px rgba(247, 73, 73, 0.2));
   &:hover:before {
     top: 50%;
   }
@@ -20,7 +20,7 @@
     visibility: hidden;
   }
   &:before {
-    content: "回到顶部";
+    content: "返回顶部";
     position: absolute;
     font-weight: bold;
     width: 30px;
@@ -39,3 +39,4 @@
   border-color: $color-black transparent transparent $color-black;
   transform: rotate(45deg);
 }
+*/

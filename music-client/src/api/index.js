@@ -62,8 +62,7 @@ const HttpManager = {
   getSongOfSingerId: (id) => get(`song/singer/detail?singerId=${id}`),
   // 返回指定歌手名的歌曲
   getSongOfSingerName: (keywords) => get(`song/singerName/detail?name=${keywords}`),
-  // 下载音乐
-  downloadMusic: (url) => get(url, {}, 'blob')
+
 }
 
 export { HttpManager }

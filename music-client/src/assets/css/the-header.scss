@@ -24,12 +24,14 @@
   .icon {
     @include icon(($header-height / 3) * 2, $color-black);
     vertical-align: middle;
+    transform: rotate(-45deg);
   }
 }
 
 /*nav*/
 .navbar {
   height: $header-height;
+  
   white-space: nowrap;
   li {
     margin: $header-nav-margin;
@@ -53,7 +55,7 @@
     width: $header-search-width;
     font-size: $font-size-default;
     border: 0;
-    text-indent: 10px;
+    text-indent: 4px;
     background-color: $color-light-grey;
     &:focus {
       outline: none;
@@ -62,12 +64,12 @@
 
   .search-btn {
     @include layout(center, center);
-    background-color: $color-blue-active;
+    background-color: $color-light-grey;
     width: $header-search-btn-width;
-    height: $header-search-btn-height;
+    height: 37;
     cursor: pointer;
     .icon {
-      @include icon(1.2em, $color-white);
+      @include icon(1.2em, $color-grey);
     }
   }
 }

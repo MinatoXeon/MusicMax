@@ -3,13 +3,13 @@
 
 .login-logo {
   background-color: $color-blue-light;
-  height: 100vh;
-  width: 50vw;
+  height: 110vh;
+  width: 100vw;
   min-width: 650px;
   overflow: hidden;
   @include layout(center, center);
   .icon {
     @include icon(6.5em, $color-blue-dark);
-    transform: rotate(-30deg);
+    transform: rotate(-45deg);
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="login-logo">
     <svg class="icon" aria-hidden="true">
-      <use :xlink:href="ERJI"></use>
+
     </svg>
   </div>
 </template>

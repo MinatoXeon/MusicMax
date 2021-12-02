@@ -59,7 +59,7 @@ export default {
               document.querySelectorAll('.has-lyric li')[j].style.fontSize = '15px'
             }
             if (i >= 0) {
-              document.querySelectorAll('.has-lyric li')[i].style.color = '#95d2f6'
+              document.querySelectorAll('.has-lyric li')[i].style.color = '#fd2d43'
               document.querySelectorAll('.has-lyric li')[i].style.fontSize = '25px'
             }
           }

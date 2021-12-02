@@ -12,7 +12,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: $header-height + 150px;
+    height: $header-height + 320px;
   }
 }
 
@@ -53,11 +53,12 @@
 
 /*歌单内容*/
 .album-content {
+  position: relative;
   margin-left: 300px;
-  padding: 40px 100px;
-  /*歌单题目*/
+  padding: 0px 100px;
+  /*歌单主题*/
   .album-title {
-    font-size: 30px;
+    font-size: 60px;
     font-weight: 600;
   }
 

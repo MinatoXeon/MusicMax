@@ -13,12 +13,13 @@
       </li>
       <li>
         <div class="header-search">
-          <input type="text" placeholder="搜索音乐" @keyup.enter="goSearch()" v-model="keywords">
           <div class="search-btn"  @click="goSearch()" >
             <svg class="icon" aria-hidden="true">
               <use :xlink:href="SOUSUO"></use>
             </svg>
           </div>
+          <input type="text" placeholder="歌手、歌曲、歌单以及更多内容" @keyup.enter="goSearch()" v-model="keywords">
+
         </div>
       </li>
       <li v-show="!loginIn" :class="{active: item.name === activeName}" v-for="item in loginMsg" :key="item.type" @click="goPage(item.path, item.name)">{{item.name}}</li>
@@ -46,7 +47,7 @@ export default {
   mixins: [mixin],
   data () {
     return {
-      musicName: 'Yin-music',
+      musicName: 'Music Max',
       navMsg: navMsg, // 左侧导航栏
       loginMsg: loginMsg, // 右侧导航栏
       menuList: menuList, // 用户下拉菜单项
@@ -85,7 +86,7 @@ export default {
       document.querySelector('.menu').classList.remove('show')
       this.changeIndex(value)
       if (!this.loginIn && path === '/my-music') {
-        this.notify('请先登录', 'warning')
+        this.notify('请先登录您的Music Max ID', 'warning')
       } else {
         this.$router.push({path: path})
       }
